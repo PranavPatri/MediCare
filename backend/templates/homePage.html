@@ -1,0 +1,2038 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;700;800&display=swap"
+    />
+  </head>
+  <style>
+    .container-icon,
+.container-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container-icon1 {
+  z-index: 1;
+}
+.depth-8-frame-0,
+.depth-8-frame-1 {
+  position: absolute;
+  top: 247.5px;
+  left: 399px;
+  width: 12.3px;
+  height: 12.3px;
+  display: none;
+}
+.depth-8-frame-1 {
+  top: 259.8px;
+  width: 13.9px;
+  height: 13.9px;
+}
+.depth-6-frame-0 {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pethealth {
+  position: relative;
+  letter-spacing: -0.27px;
+  line-height: 22.5px;
+  white-space: nowrap;
+}
+.subframes {
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-mini) 0 0;
+  box-sizing: border-box;
+}
+.home {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+}
+.depth-5-frame-0,
+.depth-6-frame-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-0 {
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.about-us {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.depth-5-frame-1,
+.depth-6-frame-02 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.services {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+}
+.depth-5-frame-2,
+.depth-6-frame-03 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-2 {
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.pet-adoption {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.depth-5-frame-3,
+.depth-6-frame-04 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.educational-resources {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.depth-5-frame-4,
+.depth-6-frame-05 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-4 {
+  padding: 0 2px 0 0;
+}
+.shop {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+}
+.depth-5-frame-5,
+.depth-6-frame-06 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-5 {
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.depth-4-frame-1 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.depth-7-frame-0,
+.image-wrapper-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.depth-7-frame-0 {
+  top: 251.5px;
+  left: -382.4px;
+  width: 19px;
+  height: 20px;
+}
+.depth-6-frame-07 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.depth-5-frame-01,
+.depth-5-frame-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-11 {
+  width: 192px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 24px;
+  padding: 0 0.6999999999999318px 0.5px;
+  box-sizing: border-box;
+  font-family: var(--font-plus-jakarta-sans);
+  font-size: var(--font-size-base);
+  color: var(--color-tan);
+}
+.depth-4-frame-0 {
+  flex: 1;
+  border-radius: var(--br-xl);
+  background-color: var(--color-linen);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  padding: 8px var(--padding-base);
+  gap: var(--gap-xs);
+}
+.register {
+  position: relative;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.21px;
+  line-height: 21px;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-white);
+  text-align: left;
+}
+.depth-7-frame-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-02,
+.depth-6-frame-08 {
+  background-color: var(--color-seagreen);
+  overflow: hidden;
+  display: flex;
+}
+.depth-6-frame-08 {
+  cursor: pointer;
+  border: 0;
+  padding: 0 var(--padding-12xs) 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-02 {
+  align-self: stretch;
+  border-radius: var(--br-xl);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-mini);
+}
+.log-in {
+  width: 46px;
+  position: relative;
+  letter-spacing: 0.21px;
+  line-height: 21px;
+  display: inline-block;
+  white-space: nowrap;
+}
+.depth-6-frame-09,
+.depth-7-frame-02 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-09 {
+  background-color: var(--color-linen);
+  overflow: hidden;
+}
+.depth-4-frame-11,
+.depth-5-frame-12 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+}
+.depth-5-frame-12 {
+  flex: 1;
+  border-radius: var(--br-xl);
+  background-color: var(--color-linen);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-base);
+}
+.depth-4-frame-11 {
+  width: 182.5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.depth-4-frame-2 {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  border-radius: var(--br-xl);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  min-height: 40px;
+}
+.depth-2-frame-0,
+.depth-3-frame-1,
+.vertical-stack {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.depth-3-frame-1 {
+  width: 546.5px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: var(--gap-13xl);
+  margin-left: -1px;
+}
+.depth-2-frame-0,
+.vertical-stack {
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+}
+.vertical-stack {
+  width: 1163px;
+  padding: 0 var(--padding-12xs) 0 0;
+  font-size: var(--font-size-sm);
+}
+.depth-2-frame-0 {
+  height: 65px;
+  border-bottom: 1px solid #e6e8eb;
+  padding: 13px 0 var(--padding-xs) var(--padding-21xl);
+  gap: var(--gap-base);
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  text-align: left;
+  font-size: 18px;
+  color: var(--color-gray);
+  font-family: var(--font-plus-jakarta-sans);
+}
+.comprehensive-care-for {
+  margin: 0;
+  width: 773px;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -1.58px;
+  line-height: 60px;
+  font-weight: 800;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.depth-10-frame-0,
+.depth-11-frame-0 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.depth-10-frame-0 {
+  min-height: 120px;
+}
+.join-our-community {
+  position: relative;
+  line-height: 24px;
+}
+.depth-10-frame-1,
+.depth-11-frame-01 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-10-frame-1 {
+  font-size: var(--font-size-base);
+}
+.depth-9-frame-0 {
+  gap: var(--gap-5xs);
+}
+.depth-8-frame-01,
+.depth-9-frame-0 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.register1 {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-white);
+  text-align: left;
+}
+.depth-11-frame-02 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-10-frame-01,
+.depth-9-frame-01 {
+  background-color: var(--color-seagreen);
+  overflow: hidden;
+  display: flex;
+}
+.depth-10-frame-01 {
+  cursor: pointer;
+  border: 0;
+  padding: 0 var(--padding-12xs) 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-9-frame-01 {
+  align-self: stretch;
+  border-radius: var(--br-5xl);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 19px;
+}
+.log-in1 {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-gray);
+  text-align: left;
+  white-space: nowrap;
+}
+.depth-11-frame-03 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-10-frame-02,
+.depth-9-frame-1 {
+  background-color: var(--color-linen);
+  overflow: hidden;
+  display: flex;
+}
+.depth-10-frame-02 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-9-frame-1 {
+  align-self: stretch;
+  border-radius: var(--br-5xl);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.depth-6-frame-010,
+.sustainable-accessories {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sustainable-accessories {
+  height: 48px;
+  flex-direction: row;
+  gap: var(--gap-xs);
+}
+.depth-6-frame-010 {
+  width: 928px;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-direction: column;
+  padding: 224px var(--padding-5xl) var(--padding-5xl) 56px;
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  background-image: url({% static 'home/depth-6-frame-0@3x.png' %});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+}
+.depth-frame-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.depth-8-frame-02 {
+  position: absolute;
+  top: -357px;
+  left: 247px;
+  width: 18px;
+  height: 20px;
+}
+.depth-7-frame-03 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.depth-6-frame-011 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.appointment-booking {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-04,
+.depth-8-frame-03 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.schedule-a-visit {
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-04 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-1 {
+  align-self: stretch;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-03,
+.depth-6-frame-1,
+.depth-7-frame-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-1 {
+  align-self: stretch;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-03 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 205px;
+  max-width: 223px;
+}
+.vector-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.depth-8-frame-05 {
+  position: absolute;
+  top: -357px;
+  left: 12px;
+  width: 19px;
+  height: 20px;
+}
+.depth-7-frame-05 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.depth-6-frame-012 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.symptom-checker {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-06,
+.depth-8-frame-06 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.check-your-pets {
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-07 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-11 {
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-13,
+.depth-6-frame-11,
+.depth-7-frame-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-11 {
+  align-self: stretch;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-13 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 205px;
+  max-width: 223px;
+}
+.vector-01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.depth-8-frame-08 {
+  position: absolute;
+  top: -357px;
+  left: -223px;
+  width: 21px;
+  height: 18px;
+}
+.depth-7-frame-07 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.depth-6-frame-013 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.pet-adoption1 {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-08,
+.depth-8-frame-09 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.find-a-new {
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-010 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-12 {
+  align-self: stretch;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-21,
+.depth-6-frame-12,
+.depth-7-frame-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-12 {
+  align-self: stretch;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-21 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 205px;
+  max-width: 223px;
+}
+.vector-02 {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.depth-8-frame-011 {
+  position: absolute;
+  top: -357px;
+  left: -458px;
+  width: 16px;
+  height: 20px;
+}
+.depth-7-frame-09 {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.depth-6-frame-014 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.educational-resources1 {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-010,
+.depth-8-frame-012 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.learn-about-pet {
+  position: relative;
+  line-height: 21px;
+}
+.depth-6-frame-13,
+.depth-7-frame-13,
+.depth-8-frame-013 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-13 {
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-6-frame-13 {
+  gap: var(--gap-9xs);
+}
+.depth-4-frame-12,
+.depth-5-frame-31 {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-xs);
+}
+.depth-5-frame-31 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  min-width: 205px;
+  max-width: 223px;
+}
+.depth-4-frame-12 {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--padding-base);
+}
+.depth-7-frame-011,
+.max {
+  align-self: stretch;
+  position: relative;
+}
+.depth-7-frame-011 {
+  flex: 1;
+  border-radius: var(--br-xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.max {
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-6-frame-015,
+.depth-7-frame-2,
+.depth-8-frame-014,
+.depth-9-frame-02 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-2 {
+  padding: var(--padding-xs) 0;
+}
+.depth-6-frame-015 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-012,
+.whiskers {
+  align-self: stretch;
+  position: relative;
+}
+.depth-7-frame-012 {
+  flex: 1;
+  border-radius: var(--br-xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.whiskers {
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-6-frame-14,
+.depth-7-frame-21,
+.depth-8-frame-015,
+.depth-9-frame-03 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-21 {
+  padding: var(--padding-xs) 0;
+}
+.depth-6-frame-14 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.bunbun,
+.depth-7-frame-013 {
+  align-self: stretch;
+  position: relative;
+}
+.depth-7-frame-013 {
+  flex: 1;
+  border-radius: var(--br-xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.bunbun {
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-6-frame-2,
+.depth-7-frame-22,
+.depth-8-frame-016,
+.depth-9-frame-04 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-22 {
+  padding: var(--padding-xs) 0;
+}
+.depth-6-frame-2 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-014,
+.tweety {
+  align-self: stretch;
+  position: relative;
+}
+.depth-7-frame-014 {
+  flex: 1;
+  border-radius: var(--br-xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.tweety {
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-8-frame-017,
+.depth-9-frame-05 {
+  flex-direction: column;
+}
+.depth-4-frame-21,
+.depth-5-frame-04,
+.depth-6-frame-3,
+.depth-7-frame-23,
+.depth-8-frame-017,
+.depth-9-frame-05 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-23 {
+  flex-direction: column;
+  padding: var(--padding-xs) 0;
+}
+.depth-4-frame-21,
+.depth-5-frame-04,
+.depth-6-frame-3 {
+  flex-shrink: 0;
+}
+.depth-6-frame-3 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-direction: column;
+}
+.depth-4-frame-21,
+.depth-5-frame-04 {
+  flex-direction: row;
+  max-width: 100%;
+}
+.depth-5-frame-04 {
+  width: 960px;
+  overflow-x: auto;
+  padding: var(--padding-base);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+}
+.depth-4-frame-21 {
+  height: 400px;
+  overflow: hidden;
+}
+.depth-7-frame-015 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.depth-6-frame-016 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.organic-pet-food {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-016,
+.depth-8-frame-018 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.healthy-meals-for {
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-019 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-14 {
+  align-self: stretch;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-05,
+.depth-6-frame-15,
+.depth-7-frame-14 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-15 {
+  align-self: stretch;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-05 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 226px;
+}
+.depth-7-frame-017 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.depth-6-frame-017 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.eco-friendly-toys {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-018,
+.depth-8-frame-020 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fun-without-the {
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-021 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-15 {
+  align-self: stretch;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-14,
+.depth-6-frame-16,
+.depth-7-frame-15 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-16 {
+  align-self: stretch;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-14 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 226px;
+}
+.depth-7-frame-019 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.depth-6-frame-018 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sustainable-accessories1 {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-020,
+.depth-8-frame-022 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.style-with-sustainability {
+  position: relative;
+  line-height: 21px;
+}
+.depth-7-frame-16,
+.depth-8-frame-023 {
+  align-self: stretch;
+  flex-direction: column;
+}
+.depth-8-frame-023 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-16 {
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-4-frame-3,
+.depth-5-frame-22,
+.depth-6-frame-17,
+.depth-7-frame-16 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-17 {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-9xs);
+}
+.depth-4-frame-3,
+.depth-5-frame-22 {
+  gap: var(--gap-xs);
+}
+.depth-5-frame-22 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  min-width: 226px;
+}
+.depth-4-frame-3 {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: var(--padding-base);
+}
+.support-pet-healthcare {
+  margin: 0;
+  width: 205px;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -1.19px;
+  line-height: 45px;
+  font-weight: 800;
+  font-family: inherit;
+  display: inline-block;
+}
+.depth-8-frame-024,
+.depth-9-frame-06 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.depth-8-frame-024 {
+  flex: 1;
+}
+.your-contribution-makes {
+  position: relative;
+  line-height: 24px;
+}
+.depth-9-frame-07 {
+  align-self: stretch;
+  align-items: center;
+}
+.depth-6-frame-019,
+.depth-7-frame-021,
+.depth-8-frame-11,
+.depth-9-frame-07 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.depth-8-frame-11 {
+  align-self: stretch;
+  align-items: center;
+  font-size: var(--font-size-base);
+}
+.depth-6-frame-019,
+.depth-7-frame-021 {
+  flex: 1;
+  max-width: 100%;
+}
+.depth-7-frame-021 {
+  width: 387.5px;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.depth-6-frame-019 {
+  align-self: stretch;
+  align-items: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+}
+.donate-now {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-white);
+  text-align: left;
+}
+.depth-10-frame-03,
+.depth-11-frame-04 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-10-frame-03 {
+  background-color: var(--color-seagreen);
+  overflow: hidden;
+}
+.depth-8-frame-025,
+.depth-9-frame-08 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.depth-9-frame-08 {
+  align-self: stretch;
+  border-radius: var(--br-5xl);
+  background-color: var(--color-seagreen);
+  overflow: hidden;
+  align-items: center;
+  padding: 0 var(--padding-xl);
+}
+.depth-8-frame-025 {
+  flex: 1;
+  align-items: flex-start;
+}
+.depth-5-frame-06,
+.depth-6-frame-18,
+.depth-7-frame-022 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.depth-7-frame-022 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  flex: 1;
+  align-items: flex-start;
+}
+.depth-5-frame-06,
+.depth-6-frame-18 {
+  align-self: stretch;
+  box-sizing: border-box;
+}
+.depth-6-frame-18 {
+  height: 48px;
+  align-items: center;
+  padding: 0 var(--padding-xl);
+}
+.depth-5-frame-06 {
+  flex: 1;
+  align-items: flex-start;
+  padding: 80px var(--padding-21xl);
+  gap: var(--gap-13xl);
+  max-width: 100%;
+}
+.depth-4-frame-4 {
+  height: 362px;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 36px;
+}
+.depth-4-frame-4,
+.service-card,
+.terms-of-service-frame {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.terms-of-service-frame {
+  align-items: flex-start;
+  font-size: var(--font-size-base);
+  color: var(--color-gray);
+}
+.service-card {
+  align-items: center;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: 48px;
+  color: var(--color-white);
+  font-family: var(--font-plus-jakarta-sans);
+}
+.privacy-policy,
+.terms-of-service {
+  position: relative;
+  line-height: 24px;
+}
+.frame-contact-us {
+  position: absolute;
+  top: 0;
+  left: 0.5px;
+  width: 100%;
+  height: 100%;
+}
+.depth-8-frame-026 {
+  position: absolute;
+  top: -1505px;
+  left: -148.5px;
+  width: 19px;
+  height: 20px;
+  display: none;
+}
+.depth-7-frame-023 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.vector-03 {
+  position: absolute;
+  top: 0;
+  left: 0.5px;
+  width: 100%;
+  height: 100%;
+}
+.depth-8-frame-027 {
+  position: absolute;
+  top: -1505px;
+  left: -188.5px;
+  width: 20px;
+  height: 18px;
+  display: none;
+}
+.depth-7-frame-024 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.vector-04 {
+  position: absolute;
+  top: 0;
+  left: 0.5px;
+  width: 100%;
+  height: 100%;
+}
+.depth-8-frame-028 {
+  position: absolute;
+  top: -1505px;
+  left: -228.5px;
+  width: 19px;
+  height: 20px;
+  display: none;
+}
+.depth-7-frame-025 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.terms-copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 17px 0 var(--padding-base);
+  gap: var(--gap-base);
+}
+.pethealth1 {
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+}
+.frame-pet-healthcare {
+  width: 146px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-4xs) 0 0;
+  box-sizing: border-box;
+  gap: 24px;
+}
+.contact-us {
+  position: relative;
+  line-height: 24px;
+}
+.privacy-contact {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.frame-privacy,
+.galileo-design,
+.services-section {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.frame-privacy {
+  width: 733px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 var(--padding-4xs) 0 0;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-tan);
+  font-family: var(--font-plus-jakarta-sans);
+}
+.galileo-design,
+.services-section {
+  flex-direction: column;
+  align-items: center;
+}
+.services-section {
+  width: 1000px;
+  padding: 0 var(--padding-xl);
+  gap: var(--gap-41xl);
+  max-width: 100%;
+}
+.galileo-design {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  padding: 0 0 var(--padding-21xl);
+  gap: var(--gap-17xl);
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1000px) {
+  .services-section {
+    gap: var(--gap-41xl);
+  }
+}
+@media screen and (max-width: 975px) {
+  .comprehensive-care-for {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .depth-6-frame-010 {
+    padding-left: 28px;
+    box-sizing: border-box;
+  }
+  .support-pet-healthcare {
+    font-size: var(--font-size-10xl);
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 725px) {
+  .depth-3-frame-1 {
+    gap: var(--gap-13xl);
+  }
+  .depth-6-frame-010 {
+    padding-top: 146px;
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .depth-5-frame-06 {
+    gap: var(--gap-13xl);
+  }
+  .galileo-design {
+    gap: var(--gap-17xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .comprehensive-care-for {
+    font-size: var(--font-size-10xl);
+    line-height: 36px;
+  }
+  .depth-6-frame-010 {
+    gap: var(--gap-13xl);
+  }
+  .support-pet-healthcare {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .depth-5-frame-06 {
+    padding-top: var(--padding-33xl);
+    padding-bottom: var(--padding-33xl);
+    box-sizing: border-box;
+  }
+  .privacy-contact {
+    flex-wrap: wrap;
+  }
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-plus-jakarta-sans: "Plus Jakarta Sans";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-10xl: 29px;
+  --font-size-sm: 14px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-tan: #a1824a;
+  --color-seagreen: #009963;
+  --color-gray: #1c170d;
+  --color-antiquewhite: #e8decf;
+  --color-linen: #f5f0e6;
+
+  /* Gaps */
+  --gap-17xl: 36px;
+  --gap-41xl: 60px;
+  --gap-xl: 20px;
+  --gap-base: 16px;
+  --gap-13xl: 32px;
+  --gap-5xs: 8px;
+  --gap-xs: 12px;
+  --gap-9xs: 4px;
+
+  /* Paddings */
+  --padding-21xl: 40px;
+  --padding-xl: 20px;
+  --padding-4xs: 9px;
+  --padding-base: 16px;
+  --padding-33xl: 52px;
+  --padding-lg: 18px;
+  --padding-xs: 12px;
+  --padding-5xl: 24px;
+  --padding-12xs: 1px;
+  --padding-mini: 15px;
+
+  /* Border radiuses */
+  --br-5xl: 24px;
+  --br-5xs: 8px;
+  --br-xs: 12px;
+  --br-xl: 20px;
+}
+a{
+  color:black;
+  text-decoration:none;
+}
+
+  </style>
+  <body>
+    <div class="galileo-design">
+      <header class="depth-2-frame-0">
+        <div class="depth-6-frame-0">
+          <img class="container-icon" alt="" />
+
+          <img class="container-icon1" loading="eager" alt="" />
+
+          <div class="depth-8-frame-0"></div>
+          <div class="depth-8-frame-1"></div>
+        </div>
+        <div class="subframes">
+          <b class="pethealth">PetHealth</b>
+        </div>
+        <div class="vertical-stack">
+          <div class="depth-4-frame-1">
+            <div class="depth-5-frame-0">
+              <div class="depth-6-frame-01">
+                <div class="services"><a href="{% url 'home' %}">Home</a></div>
+
+              </div>
+            </div>
+            <div class="depth-5-frame-1">
+              <div class="depth-6-frame-02">
+                <div class="services"><a href="{% url 'products' %}">Organic Shop</a></div>
+                
+              </div>
+            </div>
+            <div class="depth-5-frame-2">
+              <div class="depth-6-frame-03">
+                <div class="services"><a href="{% url 'diseasePrediction' %}">Prediction</a></div>
+              </div>
+            </div>
+            
+            
+            
+          </div>
+          <div class="depth-3-frame-1">
+            
+            <div class="depth-4-frame-11">
+              
+              
+              {% if not request.user.is_authenticated %}
+                <div class="depth-5-frame-02">
+                  <button class="depth-6-frame-08">
+                    <div class="depth-7-frame-01">
+                      <b class="register"><a href="{% url 'registration' %}">Register</a></b>
+                    </div>
+                  </button>
+                </div>
+                {%endif%}
+              <div class="depth-5-frame-12">
+                <div class="depth-6-frame-09">
+                  <div class="depth-7-frame-02">
+                    {% if not request.user.is_authenticated %}
+                      <b class="register"><a href="{% url 'login' %}">Log In</a></b>
+                    {% else %}
+                    <b class="register"><a href="{% url 'logout' %}">Log Out</a></b>
+                    {%endif%}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="depth-4-frame-2"
+              loading="eager"
+              alt=""
+              src="{% static 'home/depth-4-frame-2@2x.png' %}"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="services-section">
+        <section class="service-card">
+          <div class="depth-6-frame-010">
+            <div class="depth-8-frame-01">
+              <div class="depth-9-frame-0">
+                <div class="depth-10-frame-0">
+                  <div class="depth-11-frame-0">
+                    <h1 class="comprehensive-care-for">
+                      Comprehensive Care for Your Furry Friends
+                    </h1>
+                  </div>
+                </div>
+                <div class="depth-10-frame-1">
+                  <div class="depth-11-frame-01">
+                    <div class="join-our-community">
+                      Join our community of pet lovers!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sustainable-accessories">
+              {% if not request.user.is_authenticated %}
+              <div class="depth-9-frame-01">
+                
+                <button class="depth-10-frame-01">
+                  <div class="depth-11-frame-02">
+                      <b class="register1"><a href="{% url 'registration' %}">Register</a></b>
+                  </div>
+                </button>
+                
+              </div>
+              {%endif%}
+              <div class="depth-9-frame-1">
+                <button class="depth-10-frame-02">
+                  <div class="depth-11-frame-03">
+                    {% if not request.user.is_authenticated %}
+                      <b class="register"><a href="{% url 'login' %}">Log In</a></b>
+                    {% else %}
+                    <b class="register"><a href="{% url 'logout' %}">Log Out</a></b>
+                    {%endif%}
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="terms-of-service-frame">
+            <div class="depth-4-frame-12">
+              <div class="depth-5-frame-03">
+                <div class="depth-6-frame-011">
+                  <div class="depth-7-frame-03">
+                    <img
+                      class="depth-frame-icon"
+                      alt=""
+                      src="{% static 'home/vector--0-2.svg' %}"
+                    />
+
+                    <div class="depth-8-frame-02"></div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-1">
+                  <div class="depth-7-frame-04">
+                    <div class="depth-8-frame-03">
+                      <b class="appointment-booking"><a href="{% url 'bookAppointment' %}">Appointment Booking</a></b>
+                    </div>
+                  </div>
+                  <div class="depth-7-frame-1">
+                    <div class="depth-8-frame-04">
+                      <div class="schedule-a-visit">
+                        Schedule a visit easily
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="depth-5-frame-13">
+                <div class="depth-6-frame-012">
+                  <div class="depth-7-frame-05">
+                    <img
+                      class="vector-0"
+                      alt=""
+                      src="{% static 'home/vector--0-3.svg' %}"
+                    />
+
+                    <div class="depth-8-frame-05"></div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-11">
+                  <div class="depth-7-frame-06">
+                    <div class="depth-8-frame-06">
+                      <b class="symptom-checker"><a href="{% url 'diseasePrediction' %}">Symptom Checker</a></b>
+                    </div>
+                  </div>
+                  <div class="depth-7-frame-11">
+                    <div class="depth-8-frame-07">
+                      <div class="check-your-pets">
+                        Check your pet's symptoms
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="depth-5-frame-21">
+                <div class="depth-6-frame-013">
+                  <div class="depth-7-frame-07">
+                    <img
+                      class="vector-01"
+                      alt=""
+                      src="{% static 'home/vector--0-4.svg' %}"
+                    />
+
+                    <div class="depth-8-frame-08"></div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-12">
+                  <div class="depth-7-frame-08">
+                    <div class="depth-8-frame-09">
+                      <b class="pet-adoption1"><a href="{% url 'donate' %}">Donate</a></b>
+                    </div>
+                  </div>
+                  <div class="depth-7-frame-12">
+                    <div class="depth-8-frame-010">
+                      <div class="find-a-new">Save Animals</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="depth-5-frame-31">
+                <div class="depth-6-frame-014">
+                  <div class="depth-7-frame-09">
+                    <input class="vector-02" type="checkbox" />
+
+                    <div class="depth-8-frame-011"></div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-13">
+                  <div class="depth-7-frame-010">
+                    <div class="depth-8-frame-012">
+                      <b class="educational-resources1"
+                        ><a href="{% url 'chat' %}">Chat Bot</a></b
+                      >
+                    </div>
+                  </div>
+                  <div class="depth-7-frame-13">
+                    <div class="depth-8-frame-013">
+                      <div class="learn-about-pet">Learn about pet care</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="depth-4-frame-21">
+              <div class="depth-5-frame-04">
+                <div class="depth-6-frame-015">
+                  <img
+                    class="depth-7-frame-011"
+                    loading="eager"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0@2x.png' %}/"
+                  />
+
+                  <div class="depth-7-frame-2">
+                    <div class="depth-8-frame-014">
+                      <div class="depth-9-frame-02">
+                        <div class="max">Max</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-14">
+                  <img
+                    class="depth-7-frame-012"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0-1@2x.png' %}"
+                  />
+
+                  <div class="depth-7-frame-21">
+                    <div class="depth-8-frame-015">
+                      <div class="depth-9-frame-03">
+                        <div class="whiskers">Whiskers</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-2">
+                  <img
+                    class="depth-7-frame-013"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0-2@2x.png' %}"
+                  />
+
+                  <div class="depth-7-frame-22">
+                    <div class="depth-8-frame-016">
+                      <div class="depth-9-frame-04">
+                        <div class="bunbun">BunBun</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-3">
+                  <img
+                    class="depth-7-frame-014"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0-3@2x.png' %}"
+                  />
+
+                  <div class="depth-7-frame-23">
+                    <div class="depth-8-frame-017">
+                      <div class="depth-9-frame-05">
+                        <div class="tweety">Tweety</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="depth-4-frame-3">
+              <div class="depth-5-frame-05">
+                <div class="depth-6-frame-016">
+                  <img
+                    class="depth-7-frame-015"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0-4@2x.png' %}"
+                  />
+                </div>
+                <div class="depth-6-frame-15">
+                  <div class="depth-7-frame-016">
+                    <div class="depth-8-frame-018">
+                      <a href="{% url 'products' %}"><b class="organic-pet-food">Organic Pet Food</b></a>
+                    </div>
+                  </div>
+                  <div class="depth-7-frame-14">
+                    <div class="depth-8-frame-019">
+                      <div class="healthy-meals-for">
+                        Healthy meals for your pet
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="depth-5-frame-14">
+                <div class="depth-6-frame-017">
+                  <img
+                    class="depth-7-frame-017"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0-5@2x.png' %}"
+                  />
+                </div>
+                <div class="depth-6-frame-16">
+                  <div class="depth-7-frame-018">
+                    <div class="depth-8-frame-020">
+                      <a href="{% url 'products' %}"><b class="eco-friendly-toys">Eco-friendly Toys</b></a>
+                    </div>
+                  </div>
+                  <div class="depth-7-frame-15">
+                    <div class="depth-8-frame-021">
+                      <div class="fun-without-the">
+                        Fun without the footprint
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="depth-5-frame-22">
+                <div class="depth-6-frame-018">
+                  <img
+                    class="depth-7-frame-019"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0-6@2x.png' %}"
+                  />
+                </div>
+                <div class="depth-6-frame-17">
+                  <div class="depth-7-frame-020">
+                    <div class="depth-8-frame-022">
+                      <b class="sustainable-accessories1"
+                        >Sustainable Accessories</b
+                      >
+                    </div>
+                  </div>
+                  <div class="depth-7-frame-16">
+                    <div class="depth-8-frame-023">
+                      <div class="style-with-sustainability">
+                        Style with sustainability
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="depth-4-frame-4">
+              <div class="depth-5-frame-06">
+                <div class="depth-6-frame-019">
+                  <div class="depth-7-frame-021">
+                    <div class="depth-8-frame-024">
+                      <div class="depth-9-frame-06">
+                        <h1 class="support-pet-healthcare">
+                          Support Pet Healthcare
+                        </h1>
+                      </div>
+                    </div>
+                    <div class="depth-8-frame-11">
+                      <div class="depth-9-frame-07">
+                        <div class="your-contribution-makes">
+                          Your contribution makes a difference!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-18">
+                  <button class="depth-7-frame-022">
+                    <div class="depth-8-frame-025">
+                      <div class="depth-9-frame-08">
+                        <div class="depth-10-frame-03">
+                          <div class="depth-11-frame-04">
+                            <b class="donate-now"><a href="{% url 'donate' %}">Donate</a></b>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="frame-privacy">
+          <div class="privacy-contact">
+            <div class="privacy-policy">Privacy Policy</div>
+            <div class="frame-pet-healthcare">
+              <div class="terms-of-service">Terms of Service</div>
+              <div class="terms-copyright">
+                <div class="depth-7-frame-023">
+                  <img
+                    class="frame-contact-us"
+                    alt=""
+                    src="{% static 'home/vector--0-6.svg' %}"
+                  />
+
+                  <div class="depth-8-frame-026"></div>
+                </div>
+                <div class="depth-7-frame-024">
+                  <img
+                    class="vector-03"
+                    alt=""
+                    src="{% static 'home/vector--0-7.svg' %}"
+                  />
+
+                  <div class="depth-8-frame-027"></div>
+                </div>
+                <div class="depth-7-frame-025">
+                  <img
+                    class="vector-04"
+                    alt=""
+                    src="{% static 'home/vector--0-8.svg' %}"
+                  />
+
+                  <div class="depth-8-frame-028"></div>
+                </div>
+              </div>
+              <div class="pethealth1">© 2023 PetHealth</div>
+            </div>
+            <div class="contact-us">Contact Us</div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

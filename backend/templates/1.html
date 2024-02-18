@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styles remain the same as in the previous example */
+
+    /* Add loading spinner styles */
+    .loading-spinner {
+      display: none;
+      margin: 10px;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top: 4px solid #4caf50;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="chat-messages"></div>
+    <input type="text" id="user-input" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+    <div class="loading-spinner" id="loading-spinner"></div>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const userInput = document.getElementById('user-input').value;
+      appendMessage(userInput, 'user-message');
+
+      // Show loading spinner while waiting for the bot response
+      const loadingSpinner = document.getElementById('loading-spinner');
+      loadingSpinner.style.display = 'block';
+
+      try {
+        const response = await fetch('/api/getresponse/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ "messages": userInput }),
+        }).then(response => response.json()).then(data => 
+        {
+            console.log(data.replay)
+            const botReply = `Bot: ${JSON.stringify(data.reply)}`;
+            console.log(botReply)
+            appendMessage(data.replay, 'bot-message');
+          
+      });
+
+        
+        
+        
+      } catch (error) {
+        console.error('Error:', error);
+        // Display an error message in case of an API request failure
+        const errorMessage = `Bot: Oops! Something went wrong. Please try again. (${error.message})`;
+        appendMessage(errorMessage, 'bot-message');
+      } finally {
+        // Hide loading spinner after receiving the bot response
+        loadingSpinner.style.display = 'none';
+      }
+    }
+
+    function appendMessage(message, messageType) {
+      const chatMessages = document.getElementById('chat-messages');
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message', messageType);
+
+      const messageBox = document.createElement('div');
+      messageBox.classList.add('message-box', `${messageType}-box`);
+      messageBox.textContent = message;
+
+      messageDiv.appendChild(messageBox);
+      chatMessages.appendChild(messageDiv);
+
+      // Scroll to the bottom to show the latest message
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  </script>
+</body>
+</html>

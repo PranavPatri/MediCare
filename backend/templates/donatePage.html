@@ -1,0 +1,1870 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;700;800&display=swap"
+    />
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/a9375f4385.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <style>
+
+    .form-container {
+    padding: 40px;
+    background-color: #f2f2f2;
+    margin-top: 50px;
+    border-radius: 3%;
+  }
+
+  .upi-icon {
+      width: 150px; /* Adjust based on your preference */
+      margin: 15px 15px 5px 0; /* Space between icons */
+      vertical-align: middle;
+  }
+
+  .upi-icon i {
+    padding: 5px 0;
+  }
+
+  #upiId {
+    padding: 2px 5px;
+    border-radius: 5px;
+  }
+
+  .btn {
+    border-radius: 5px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .form-control {
+          font-size: 14px;
+          padding: .375rem .75rem;
+      }
+
+      .upi-icon {
+          width: 75px; /* Smaller icons for smaller screens */
+      }
+  }
+
+
+    .depth-7-frame-0,
+.pet-health-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.depth-7-frame-0 {
+  top: -199.5px;
+  left: 1421px;
+  width: 13px;
+  height: 13px;
+}
+.depth-6-frame-0 {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.depth-5-frame-0 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.pet-health {
+  position: relative;
+  letter-spacing: -0.27px;
+  line-height: 22.5px;
+  white-space: nowrap;
+}
+.depth-5-frame-1,
+.depth-6-frame-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-1 {
+  height: 22px;
+}
+.depth-4-frame-0 {
+  gap: var(--gap-base);
+}
+.depth-3-frame-0,
+.depth-4-frame-0 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.about {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+}
+.depth-5-frame-01,
+.depth-6-frame-02 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-01 {
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.services {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+}
+.depth-5-frame-11,
+.depth-6-frame-03 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-11 {
+  flex: 1;
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.stories {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+}
+.depth-5-frame-2,
+.depth-6-frame-04 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.donate {
+  position: relative;
+  line-height: 21px;
+  font-weight: 500;
+}
+.depth-5-frame-3,
+.depth-6-frame-05 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-3 {
+  flex: 1;
+}
+.depth-4-frame-01 {
+  align-self: stretch;
+  width: 304.3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.log-in {
+  position: relative;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.21px;
+  line-height: 21px;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-white);
+  text-align: left;
+  white-space: nowrap;
+}
+.depth-7-frame-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-02,
+.depth-6-frame-06 {
+  background-color: var(--color-seagreen);
+  overflow: hidden;
+  display: flex;
+}
+.depth-6-frame-06 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-5-frame-02 {
+  align-self: stretch;
+  flex: 1;
+  border-radius: var(--br-xl);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-base);
+}
+.sign-up {
+  position: relative;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.21px;
+  line-height: 21px;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-gray);
+  text-align: left;
+  white-space: nowrap;
+}
+.depth-6-frame-07,
+.depth-7-frame-02 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-07 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-linen);
+  overflow: hidden;
+}
+.depth-4-frame-1,
+.depth-5-frame-12 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+}
+.depth-5-frame-12 {
+  border-radius: var(--br-xl);
+  background-color: var(--color-linen);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-base);
+}
+.depth-4-frame-1 {
+  width: 176px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.depth-2-frame-0,
+.depth-3-frame-1 {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.depth-3-frame-1 {
+  height: 40px;
+  width: 1080.4px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: var(--gap-13xl);
+  font-size: var(--font-size-sm);
+}
+.depth-2-frame-0 {
+  align-self: stretch;
+  border-bottom: 1px solid #e6e8eb;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-xs) var(--padding-21xl);
+  gap: 0;
+  top: 0;
+  row-gap: 20px;
+  z-index: 99;
+  position: sticky;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray);
+  font-family: var(--font-plus-jakarta-sans);
+}
+.help-give-all {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -1.58px;
+  line-height: 60px;
+  font-weight: 800;
+  font-family: inherit;
+}
+.depth-11-frame-0 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-10-frame-0 {
+  align-self: stretch;
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.depth-10-frame-0,
+.depth-8-frame-0,
+.depth-9-frame-0 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-9-frame-0 {
+  align-self: stretch;
+}
+.depth-8-frame-0 {
+  width: 658px;
+}
+.adoptions-text-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.depth-13-frame-0 {
+  position: absolute;
+  top: -690px;
+  left: 1284px;
+  width: 16px;
+  height: 16px;
+}
+.depth-12-frame-0 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.depth-11-frame-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.search-for-a {
+  width: 291px;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+}
+.depth-12-frame-01 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-10-frame-01,
+.depth-11-frame-1 {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.depth-11-frame-1 {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 var(--padding-12xs) 0 0;
+  box-sizing: border-box;
+  min-width: 211px;
+  min-height: 48px;
+}
+.depth-10-frame-01 {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-base);
+  min-width: 234px;
+}
+.search {
+  position: relative;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  font-family: var(--font-plus-jakarta-sans);
+  color: var(--color-white);
+  text-align: left;
+}
+.depth-13-frame-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-11-frame-02,
+.depth-12-frame-02 {
+  background-color: var(--color-seagreen);
+  overflow: hidden;
+  display: flex;
+}
+.depth-12-frame-02 {
+  cursor: pointer;
+  border: 0;
+  padding: 0 var(--padding-12xs) 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-11-frame-02 {
+  flex: 1;
+  border-radius: 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 19px;
+}
+.depth-10-frame-1 {
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-8-frame-1,
+.depth-9-frame-01 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.depth-9-frame-01 {
+  width: 480px;
+  border-radius: 32px;
+  background-color: var(--color-white);
+  align-items: center;
+  padding: 0 8px 0 var(--padding-base);
+  box-sizing: border-box;
+  min-height: 64px;
+  max-width: 100%;
+}
+.depth-8-frame-1 {
+  width: 656.7px;
+  align-items: flex-start;
+  font-size: var(--font-size-base);
+  color: var(--color-tan);
+}
+.depth-7-frame-03 {
+  width: 736.7px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-21xl) var(--padding-21xl) 39px;
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  min-height: 480px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.another-frame,
+.depth-6-frame-08,
+.our-impact-text {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.our-impact-text {
+  height: 464px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+}
+.another-frame,
+.depth-6-frame-08 {
+  flex-direction: row;
+}
+.depth-6-frame-08 {
+  flex: 1;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  align-items: flex-end;
+  padding: var(--padding-base) var(--padding-base) 0;
+  background-image: url("{% static 'home/don2 (1).png' %}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.another-frame {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-base) var(--padding-base);
+  color: var(--color-white);
+}
+.depth-7-frame-04 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.donating-to-pet {
+  align-self: stretch;
+  height: 96px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.depth-6-frame-09,
+.depth-7-frame-2,
+.depth-8-frame-01,
+.depth-9-frame-02 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-2 {
+  padding: var(--padding-xs) 0;
+}
+.depth-6-frame-09 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-05 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.ive-seen-firsthand {
+  align-self: stretch;
+  height: 96px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+}
+.depth-6-frame-1,
+.depth-7-frame-21,
+.depth-8-frame-02,
+.depth-9-frame-03 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-21 {
+  padding: var(--padding-xs) 0;
+}
+.depth-6-frame-1 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-06 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.i-believe-that {
+  align-self: stretch;
+  height: 96px;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+.depth-6-frame-2,
+.depth-7-frame-22,
+.depth-8-frame-03,
+.depth-9-frame-04 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-22 {
+  padding: var(--padding-xs) 0;
+}
+.depth-6-frame-2 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-07 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.donating-to-pet1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-8-frame-04,
+.depth-9-frame-05 {
+  flex: 1;
+}
+.depth-6-frame-3,
+.depth-7-frame-23,
+.depth-8-frame-04,
+.depth-9-frame-05 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-23 {
+  height: 144px;
+  padding: var(--padding-xs) 0;
+  box-sizing: border-box;
+}
+.depth-6-frame-3 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-08 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.i-think-that {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-8-frame-05,
+.depth-9-frame-06 {
+  flex: 1;
+}
+.depth-6-frame-4,
+.depth-7-frame-24,
+.depth-8-frame-05,
+.depth-9-frame-06 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-24 {
+  height: 144px;
+  padding: var(--padding-xs) 0;
+  box-sizing: border-box;
+}
+.depth-6-frame-4 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-09 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.i-love-donating {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+.depth-8-frame-06,
+.depth-9-frame-07 {
+  flex: 1;
+}
+.depth-6-frame-5,
+.depth-7-frame-25,
+.depth-8-frame-06,
+.depth-9-frame-07 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-25 {
+  height: 144px;
+  padding: var(--padding-xs) 0;
+  box-sizing: border-box;
+}
+.depth-6-frame-5 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-010 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.donating-to-pet2 {
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-8-frame-07,
+.depth-9-frame-08,
+.donating-to-pet2 {
+  align-self: stretch;
+  flex: 1;
+}
+.depth-6-frame-6,
+.depth-7-frame-26,
+.depth-8-frame-07,
+.depth-9-frame-08 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-26 {
+  align-self: stretch;
+  height: 168px;
+  padding: var(--padding-xs) 0;
+  box-sizing: border-box;
+}
+.depth-6-frame-6 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.depth-7-frame-011 {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.i-believe-that1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-8-frame-08,
+.depth-9-frame-09 {
+  flex: 1;
+  flex-direction: column;
+}
+.depth-4-frame-11,
+.depth-5-frame-03,
+.depth-6-frame-7,
+.depth-7-frame-27,
+.depth-8-frame-08,
+.depth-9-frame-09 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-27 {
+  height: 144px;
+  flex-direction: column;
+  padding: var(--padding-xs) 0;
+  box-sizing: border-box;
+}
+.depth-4-frame-11,
+.depth-5-frame-03,
+.depth-6-frame-7 {
+  flex-shrink: 0;
+}
+.depth-6-frame-7 {
+  width: 240px;
+  border-radius: var(--br-5xs);
+  flex-direction: column;
+}
+.depth-4-frame-11,
+.depth-5-frame-03 {
+  flex-direction: row;
+}
+.depth-5-frame-03 {
+  width: 1191px;
+  overflow-x: auto;
+  padding: var(--padding-base);
+  box-sizing: border-box;
+  gap: var(--gap-xs);
+  max-width: 124%;
+}
+.depth-4-frame-11 {
+  height: 440px;
+  overflow: hidden;
+  max-width: 100%;
+  font-size: var(--font-size-base);
+}
+.our-impact {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.33px;
+  line-height: 27.5px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.depth-4-frame-2,
+.depth-5-frame-04,
+.depth-6-frame-010 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-4-frame-2 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: var(--padding-xl) var(--padding-base) var(--padding-xs);
+}
+.depth-7-frame-012 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.depth-6-frame-011 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.pets-helped {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-013,
+.depth-8-frame-09 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.weve-provided-medical {
+  align-self: stretch;
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-010 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-1 {
+  align-self: stretch;
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-05,
+.depth-6-frame-11,
+.depth-7-frame-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-11 {
+  align-self: stretch;
+  height: 87px;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-05 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) 14px var(--padding-base) var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 205px;
+  max-width: 223px;
+}
+.depth-7-frame-014 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.depth-6-frame-012 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.raised {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-015,
+.depth-8-frame-011 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.weve-raised-over {
+  align-self: stretch;
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-012 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-11 {
+  align-self: stretch;
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-13,
+.depth-6-frame-12,
+.depth-7-frame-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-12 {
+  align-self: stretch;
+  height: 87px;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-13 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 205px;
+  max-width: 223px;
+}
+.depth-7-frame-016 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.depth-6-frame-013 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.volunteers {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-017,
+.depth-8-frame-013 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.our-volunteers-have {
+  align-self: stretch;
+  position: relative;
+  line-height: 21px;
+}
+.depth-8-frame-014 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-12 {
+  align-self: stretch;
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-5-frame-21,
+.depth-6-frame-13,
+.depth-7-frame-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-13 {
+  align-self: stretch;
+  height: 87px;
+  gap: var(--gap-9xs);
+}
+.depth-5-frame-21 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  gap: var(--gap-xs);
+  min-width: 205px;
+  max-width: 223px;
+}
+.depth-7-frame-018 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.depth-6-frame-014 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.adoptions {
+  position: relative;
+  line-height: 20px;
+}
+.depth-7-frame-019,
+.depth-8-frame-015 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.weve-helped-100000 {
+  align-self: stretch;
+  position: relative;
+  line-height: 21px;
+}
+.depth-6-frame-14,
+.depth-7-frame-13,
+.depth-8-frame-016 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-7-frame-13 {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-6-frame-14 {
+  height: 87px;
+  gap: var(--gap-9xs);
+}
+.depth-4-frame-3,
+.depth-5-frame-31 {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-xs);
+}
+.depth-5-frame-31 {
+  flex: 1;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-antiquewhite);
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
+    var(--padding-base);
+  min-width: 205px;
+  max-width: 223px;
+}
+.depth-4-frame-3 {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--padding-base);
+  font-size: var(--font-size-base);
+}
+.another-frame-parent,
+.our-impact-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.our-impact-frame {
+  align-self: stretch;
+  align-items: flex-start;
+  font-size: 22px;
+}
+.another-frame-parent {
+  flex: 1;
+  align-items: center;
+  max-width: calc(100% - 142px);
+}
+.we-are-90 {
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+  font-weight: 500;
+}
+.depth-6-frame-015,
+.depth-7-frame-020 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-015 {
+  width: 60px;
+  padding: 0 var(--padding-12xs) 0 0;
+  box-sizing: border-box;
+}
+.m {
+  position: relative;
+  line-height: 21px;
+}
+.depth-6-frame-15,
+.depth-7-frame-021 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.depth-6-frame-15 {
+  padding: 0 var(--padding-12xs) 0 0;
+  font-size: var(--font-size-sm);
+}
+.depth-5-frame-06 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.depth-6-frame-016,
+.depth-6-frame-16 {
+  height: 8px;
+  border-radius: var(--br-9xs);
+}
+.depth-6-frame-016 {
+  flex: 1;
+  background-color: var(--color-antiquewhite);
+}
+.depth-6-frame-16 {
+  width: 99px;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-seagreen);
+  z-index: 1;
+}
+.depth-5-frame-14 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.of-our-2000000 {
+  width: 88px;
+  position: relative;
+  line-height: 21px;
+  display: inline-block;
+}
+.depth-4-frame-02,
+.depth-5-frame-22,
+.depth-6-frame-017 {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.depth-6-frame-017 {
+  display: flex;
+  justify-content: flex-start;
+}
+.depth-4-frame-02,
+.depth-5-frame-22 {
+  box-sizing: border-box;
+}
+.depth-5-frame-22 {
+  height: 63px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 var(--padding-12xs) 0 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-tan);
+}
+.depth-4-frame-02 {
+  height: 199px;
+  padding: var(--padding-base);
+  gap: var(--gap-xs);
+}
+.depth-3-frame-11,
+.depth-4-frame-02,
+.frame-parent {
+  display: flex;
+  justify-content: flex-start;
+}
+.depth-3-frame-11 {
+  height: 1486.5px;
+  width: 141.9px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-size-base);
+}
+.frame-parent {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-end;
+  max-width: 100%;
+  text-align: left;
+  font-size: 48px;
+  color: var(--color-gray);
+  font-family: var(--font-plus-jakarta-sans);
+}
+.about1,
+.pet-health1,
+.services1 {
+  position: relative;
+  line-height: 24px;
+}
+.pet-health-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 48px 4px 0 0;
+}
+.stories1 {
+  position: relative;
+  line-height: 24px;
+}
+.frame-services-stories {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 17px;
+}
+.donate1 {
+  position: relative;
+  line-height: 24px;
+}
+.our-impact-text1 {
+  width: 759px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+.depth-frame-container,
+.galileo-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.depth-frame-container {
+  width: 1142px;
+  padding: 0 var(--padding-xl);
+  gap: var(--gap-41xl);
+  max-width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-tan);
+  font-family: var(--font-plus-jakarta-sans);
+}
+.galileo-design {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  padding: 0 0 var(--padding-21xl);
+  gap: var(--gap-xl);
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1150px) {
+  .depth-frame-container {
+    gap: var(--gap-41xl);
+  }
+}
+@media screen and (max-width: 1050px) {
+  .help-give-all {
+    font-size: 38px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .depth-3-frame-1 {
+    gap: var(--gap-13xl);
+  }
+  .depth-11-frame-1 {
+    min-height: auto;
+  }
+  .depth-10-frame-01 {
+    flex-wrap: wrap;
+  }
+  .depth-7-frame-03 {
+    gap: var(--gap-13xl);
+  }
+  .our-impact-text {
+    height: auto;
+  }
+  .another-frame-parent {
+    max-width: 100%;
+  }
+  .depth-3-frame-11 {
+    display: none;
+  }
+  .our-impact-text1 {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 450px) {
+  .help-give-all {
+    font-size: 29px;
+    line-height: 36px;
+  }
+  .our-impact {
+    font-size: var(--font-size-lg);
+    line-height: 22px;
+  }
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.form-container {
+  padding: 40px;
+  font-size: 16px;
+}
+
+.form-container h3 {
+  font-size: 24px;
+}
+
+:root {
+  /* fonts */
+  --font-plus-jakarta-sans: "Plus Jakarta Sans";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-tan: #a1824a;
+  --color-seagreen: #009963;
+  --color-antiquewhite: #e8decf;
+  --color-gray: #1c170d;
+  --color-linen: #f5f0e6;
+
+  /* Gaps */
+  --gap-xl: 20px;
+  --gap-41xl: 60px;
+  --gap-xs: 12px;
+  --gap-9xs: 4px;
+  --gap-13xl: 32px;
+  --gap-base: 16px;
+
+  /* Paddings */
+  --padding-21xl: 40px;
+  --padding-xl: 20px;
+  --padding-base: 16px;
+  --padding-12xs: 1px;
+  --padding-lg: 18px;
+  --padding-xs: 12px;
+
+  /* Border radiuses */
+  --br-9xs: 4px;
+  --br-5xs: 8px;
+  --br-xs: 12px;
+  --br-xl: 20px;
+}
+a{
+  color:black;
+  text-decoration:none;
+}
+
+
+.help-give-all {
+  background-color: white;
+  background: linear-gradient(to right, rgb(163, 37, 100) 0%,  rgb(234, 58, 13) 90%); /* Apply a linear gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
+  color: #333; /* Dark color for the text */
+  font-family: $font; /* Apply a custom font */
+  margin: 0; /* Remove default margin */
+}
+
+
+
+
+  </style>
+  <body>
+    <div class="galileo-design">
+      <header class="depth-2-frame-0">
+        <div class="depth-3-frame-0">
+          <div class="depth-4-frame-0">
+            <div class="depth-5-frame-0">
+              <div class="depth-6-frame-0">
+                <img
+                  class="pet-health-text"
+                  loading="eager"
+                  alt=""
+                  src="{% static 'home/vector--0.svg' %}"
+                />
+
+                <div class="depth-7-frame-0"></div>
+              </div>
+            </div>
+            <div class="depth-5-frame-1">
+              <div class="depth-6-frame-01">
+                <b class="pet-health">Pet Health</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="depth-3-frame-1">
+          <div class="depth-4-frame-01">
+            <div class="depth-5-frame-01">
+              <div class="depth-6-frame-02">
+                <div class="about"><a href="{% url 'diseasePrediction' %}">About Us</a></div>
+              </div>
+            </div>
+            
+            <div class="depth-5-frame-2">
+              <div class="depth-6-frame-04">
+                <div class="stories"><a href="{% url 'diseasePrediction' %}">Prediction</a></div>
+              </div>
+            </div>
+            <div class="depth-5-frame-3">
+              <div class="depth-6-frame-05">
+                <div class="donate"><a href="{% url 'home' %}">Home</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="depth-4-frame-1">
+            <div class="depth-5-frame-02">
+              <button class="depth-6-frame-06">
+                <div class="depth-7-frame-01">
+                  <b class="log-in"><a href="{% url 'authentication' %}">Log In</a></b>
+                </div>
+              </button>
+            </div>
+            <div class="depth-5-frame-12">
+              <button class="depth-6-frame-07">
+                <div class="depth-7-frame-02">
+                  <b class="sign-up"><a href="{% url 'authentication' %}">Sign up</a></b>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="depth-frame-container">
+        <section class="frame-parent">
+          <div class="another-frame-parent">
+            <div class="another-frame">
+              <div class="depth-6-frame-08">
+                <div class="our-impact-text">
+                  <div class="depth-7-frame-03">
+                    <div class="depth-8-frame-0">
+                      <div class="depth-9-frame-0">
+                        <div class="depth-10-frame-0">
+                          <div class="depth-11-frame-0">
+                            <h1 class="help-give-all">
+                              Paws for a cause: Donate today
+                            </h1>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="depth-4-frame-11">
+              <div class="depth-5-frame-03">
+                <div class="depth-6-frame-09">
+                  <img
+                    class="depth-7-frame-04"
+                    loading="eager"
+                    alt=""
+                    src="{% static 'home/sarah.png' %}"
+                  />
+
+                  <div class="depth-7-frame-2">
+                    <div class="depth-8-frame-01">
+                      <div class="depth-9-frame-02">
+                        <div class="donating-to-pet">
+                          "The smallest feline is a masterpiece, and to help them is to touch art itself."
+                          <p>-Sarah O’Connor</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-1">
+                  <img
+                    class="depth-7-frame-05"
+                    alt=""
+                    src="{% static 'home/rathan tata.png' %}"
+                  />
+
+                  <div class="depth-7-frame-21">
+                    <div class="depth-8-frame-02">
+                      <div class="depth-9-frame-03">
+                        <div class="ive-seen-firsthand">
+                          "A pet is no different from a member of one's family today."
+                          <p>-Ratan Tata</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-2">
+                  <img
+                    class="depth-7-frame-06"
+                    alt=""
+                    src="{% static 'home/danial kim.png' %}"
+                  />
+
+                  <div class="depth-7-frame-22">
+                    <div class="depth-8-frame-03">
+                      <div class="depth-9-frame-04">
+                        <div class="i-believe-that">"I believe that donating to pet health organizations is a way for all of us to give back to our furry friends."
+                        </div>
+                        <p>-Daniel Dae Kim</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-3">
+                  <img
+                    class="depth-7-frame-07"
+                    alt=""
+                    src="{% static 'home/david.png' %}"
+                  />
+
+                  <div class="depth-7-frame-23">
+                    <div class="depth-8-frame-04">
+                      <div class="depth-9-frame-05">
+                        <div class="donating-to-pet1">
+                          "Animals are the best friends—they ask no questions, they pass no criticisms.."
+                        </div>
+                        <p>-David</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-4">
+                  <img
+                    class="depth-7-frame-08"
+                    alt=""
+                    src="{% static 'home/laura.png' %}"
+                  />
+
+                  <div class="depth-7-frame-24">
+                    <div class="depth-8-frame-05">
+                      <div class="depth-9-frame-06">
+                        <div class="i-think-that">
+                          "Supporting animal welfare is the purest form of giving—unconditional love for unconditional love."
+                        </div>
+                        <p>-Laura</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-5">
+                  <img
+                    class="depth-7-frame-09"
+                    alt=""
+                    src="{% static 'home/olovia.png' %}"
+                  />
+
+                  <div class="depth-7-frame-25">
+                    <div class="depth-8-frame-06">
+                      <div class="depth-9-frame-07">
+                        <div class="i-love-donating">"The greatness of a community can be judged by the way its animals are treated."
+                        </div>
+                        <p>-Olovia</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-6">
+                  <img
+                    class="depth-7-frame-010"
+                    alt=""
+                    src="{% static 'home/depth-7-frame-0-6@2x.png' %}"
+                  />
+
+                  <div class="depth-7-frame-26">
+                    <div class="depth-8-frame-07">
+                      <div class="depth-9-frame-08">
+                        <div class="donating-to-pet2">
+                          "Donating to pet health organizations is something I
+                          feel passionate about because it's a way to give back
+                          to the animals who bring so much joy to our lives."
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+
+            <div class="form-container mt-5">
+                <form id="paymentForm">
+                    <!-- UPI Payment Icons -->
+                    <div><h3 class="help-give-all">Make a Pawsitive Impact: Join the Cause, Donate Now!</h3><br/>
+                      <div class="upi-icon">
+                      <i class="fa-brands fa-google-pay"></i>
+                      <i class="fa-brands fa-amazon-pay"></i>
+                      <i class="fa-brands fa-paypal"></i>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="upiId">Enter UPI ID</label><br>
+                        <input type="text" class="" id="upiId" name="upiId" placeholder="mobileNumber@UPI" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$">
+                        <div class="invalid-feedback">
+                            Please enter a valid UPI ID.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Proceed to Pay</button>
+                </form>
+          
+          </div>
+
+
+            <div class="our-impact-frame">
+              <div class="depth-4-frame-2">
+                <div class="depth-5-frame-04">
+                  <div class="depth-6-frame-010">
+                    <h3 class="our-impact">Our impact</h3>
+                  </div>
+                </div>
+              </div>
+              
+
+              
+
+
+
+              <div class="depth-4-frame-3">
+                <div class="depth-5-frame-05">
+                  <div class="depth-6-frame-011">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                  </div>
+                  <div class="depth-6-frame-11">
+                    <div class="depth-7-frame-013">
+                      <div class="depth-8-frame-09">
+                        <b class="pets-helped">1,000,000 pets helped</b>
+                      </div>
+                    </div>
+                    <div class="depth-7-frame-1">
+                      <div class="depth-8-frame-010">
+                        <div class="weve-provided-medical">
+                          We've provided medical care and found loving homes for
+                          over 1 million pets.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-5-frame-13">
+                  <div class="depth-6-frame-012">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div class="depth-6-frame-12">
+                    <div class="depth-7-frame-015">
+                      <div class="depth-8-frame-011">
+                        <b class="raised">₹100,000,000 raised</b>
+                      </div>
+                    </div>
+                    <div class="depth-7-frame-11">
+                      <div class="depth-8-frame-012">
+                        <div class="weve-raised-over">
+                          We've raised over ₹100 crore to support pet health
+                          initiatives and organizations.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-5-frame-21">
+                  <div class="depth-6-frame-013">
+                    <i class="fa-solid fa-people-carry-box"></i>
+                  </div>
+                  <div class="depth-6-frame-13">
+                    <div class="depth-7-frame-017">
+                      <div class="depth-8-frame-013">
+                        <b class="volunteers">10,000 volunteers</b>
+                      </div>
+                    </div>
+                    <div class="depth-7-frame-12">
+                      <div class="depth-8-frame-014">
+                        <div class="our-volunteers-have">
+                          Our volunteers have dedicated 10,000 hours to helping
+                          pets in need.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="depth-5-frame-31">
+                  <div class="depth-6-frame-014">
+                    <i class="fa-solid fa-paw"></i>
+                  </div>
+                  <div class="depth-6-frame-14">
+                    <div class="depth-7-frame-019">
+                      <div class="depth-8-frame-015">
+                        <b class="adoptions">100,000 adoptions</b>
+                      </div>
+                    </div>
+                    <div class="depth-7-frame-13">
+                      <div class="depth-8-frame-016">
+                        <div class="weve-helped-100000">
+                          We've helped 100,000 pets find forever families
+                          through our adoption programs.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="depth-3-frame-11">
+            <div class="depth-4-frame-02">
+              <div class="depth-5-frame-06">
+                <div class="depth-6-frame-015">
+                  <div class="depth-7-frame-020">
+                    <div class="we-are-90">We are 90% funded</div>
+                  </div>
+                </div>
+                <div class="depth-6-frame-15">
+                  <div class="depth-7-frame-021">
+                    <div class="m">90L</div>
+                  </div>
+                </div>
+              </div>
+              <div class="depth-5-frame-14">
+                <div class="depth-6-frame-016"></div>
+                <div class="depth-6-frame-16"></div>
+              </div>
+              <div class="depth-5-frame-22">
+                <div class="depth-6-frame-017">
+                  <div class="of-our-2000000">of our ₹1,00,00,000 goal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="our-impact-text1">
+          <div class="about1">About</div>
+          <div class="frame-services-stories">
+            <div class="services1">Services</div>
+            <div class="pet-health-frame">
+              <div class="pet-health1">@2023 Pet Health</div>
+            </div>
+            <div class="stories1">Stories</div>
+          </div>
+          <div class="donate1">Donate</div>
+        </div>
+      </main>
+    </div>
+
+
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              // Fetch the form we want to apply custom Bootstrap validation styles to
+              var form = document.getElementById('paymentForm');
+              form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+              }, false);
+          }, false);
+      })();
+  </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,191 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Booking Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: optima;
+        background-image: url("65.png"); /* Replace 'background.jpg' with your image file */
+        background-size: cover;
+        background-position: f;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .appointment-form {
+        width: 25%;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Semi-transparent white background */
+        padding: 30px;
+        margin-right: 500px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select {
+        width: calc(100% - 20px); /* Adjusting width considering padding */
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #caa6a6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Smooth transition for button hover */
+      }
+
+      button:hover {
+        background-color: #800080; /* Purple color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="appointment-form">
+        <h1>Appointment Form</h1>
+        <form method="post" action="{% url 'appointment_form' %}">
+          {% csrf_token %}
+          <label for="hospital">Select Hospital:</label>
+          <select id="hospital" name="hospital" required>
+            <option value="" disabled selected>Select a hospital</option>
+            <option value="Animal Care Hospital, Visakhapatnam">
+              Animal Care Hospital, Visakhapatnam
+            </option>
+            <option value="Pet Wellness Clinic, Vijayawada">
+              Pet Wellness Clinic, Vijayawada
+            </option>
+            <option value="Vet Life Hospital, Guntur">
+              Vet Life Hospital, Guntur
+            </option>
+            <option value="Paws and Claws Veterinary Clinic, Nellore">
+              Paws and Claws Veterinary Clinic, Nellore
+            </option>
+            <option value="Happy Tails Veterinary Hospital, Rajahmundry">
+              Happy Tails Veterinary Hospital, Rajahmundry
+            </option>
+            <option value="Healthy Pets Clinic, Kakinada">
+              Healthy Pets Clinic, Kakinada
+            </option>
+            <option value="Blue Paws Veterinary Care, Tirupati">
+              Blue Paws Veterinary Care, Tirupati
+            </option>
+            <option value="Caring Paws Veterinary Hospital, Ongole">
+              Caring Paws Veterinary Hospital, Ongole
+            </option>
+            <option value="Purrfect Health Veterinary Center, Anantapur">
+              Purrfect Health Veterinary Center, Anantapur
+            </option>
+            <option value="Sunrise Pet Hospital, Chittoor">
+              Sunrise Pet Hospital, Chittoor
+            </option>
+            <option value="Petal Paws Vet Care, Kadapa">
+              Petal Paws Vet Care, Kadapa
+            </option>
+            <option value="Royal Pets Clinic, Nandyal">
+              Royal Pets Clinic, Nandyal
+            </option>
+            <option value="Golden Fur Veterinary Services, Eluru">
+              Golden Fur Veterinary Services, Eluru
+            </option>
+            <option value="Loving Tails Animal Hospital, Machilipatnam">
+              Loving Tails Animal Hospital, Machilipatnam
+            </option>
+            <option value="Healing Hooves Veterinary Clinic, Srikakulam">
+              Healing Hooves Veterinary Clinic, Srikakulam
+            </option>
+            <option value="Green Paws Veterinary Care, Vizianagaram">
+              Green Paws Veterinary Care, Vizianagaram
+            </option>
+            <option value="Whiskers and Wags Vet Clinic, Tenali">
+              Whiskers and Wags Vet Clinic, Tenali
+            </option>
+            <option value="City Vets Hospital, Kurnool">
+              City Vets Hospital, Kurnool
+            </option>
+            <option value="Companion Care Veterinary Center, Proddatur">
+              Companion Care Veterinary Center, Proddatur
+            </option>
+            <option value="Vet Harmony Clinic, Srikakulam">
+              Vet Harmony Clinic, Srikakulam
+            </option>
+          </select>
+          <label for="petName">Pet Name:</label>
+          <input
+            type="text"
+            id="petName"
+            name="petName"
+            placeholder="Enter the name"
+            required
+          />
+          <label for="ownerName">Owner Name:</label>
+          <input
+            type="text"
+            id="ownerName"
+            name="ownerName"
+            placeholder="Enter the name"
+            required
+          />
+          <label for="healthIssue">Health Issue:</label>
+          <input
+            type="text"
+            id="healthIssue"
+            name="healthIssue"
+            placeholder="Enter the health Issues"
+            required
+          />
+          <label for="petGender">Pet Gender:</label>
+          <select
+            id="petGender"
+            name="petGender"
+            placeholder="Enter the Gender"
+            required
+          >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label for="appointmentDateTime">Appointment Date and Time:</label>
+          <input
+            type="datetime-local"
+            id="appointmentDateTime"
+            name="appointmentDateTime"
+            required
+          />
+          <button type="submit" value="submit">Schedule Appointment</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+Django==5.0.2
+django-filter==23.5
+djangorestframework==3.14.0
+Markdown==3.5.2
+tensorflow==2.15.0
+pillow==10.2.0
+

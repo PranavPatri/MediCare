@@ -1,0 +1,160 @@
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Disease Detection & Remedy Companion</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white; /* Set container color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #dragDropArea {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #fileInput {
+      display: none;
+    }
+
+    #imagePreview {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #imagePreview img {
+      max-width: 50%;
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 5px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #accuracy {
+      margin-top: 20px;
+      font-size: 18px;
+      color: blue; /* Set Accuracy color to Blue */
+    }
+
+    #accuracyValue {
+      font-weight: bold;
+      color: green; /* Set Accuracy text color to Green */
+    }
+
+    #remedies {
+      margin-top: 20px;
+    }
+
+    #remedies p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    #Suggestion {
+      margin-top: 20px;
+      font-size: 18px;
+      color: blue; /* Set Suggestion color to Blue */
+    }
+
+    #SuggestionValue {
+      font-weight: bold;
+      color: pink; /* Set Suggestion text color to Pink */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Pet Disease Detection & Remedy Companion</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="image">Select Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <button type="button" onclick="uploadImage()">Upload</button>
+    </form>
+
+    <div id="imagePreview">
+      <p id="fileName"></p>
+      <img id="previewImage" src="https://www.companionvet.ca/wp-content/uploads/2018/03/CompanionVeterinaryClinic-607921316.jpg" alt="Uploaded Image">
+    </div>
+
+    <div id="result">
+      <p>Ensuring optimal pet health involves providing a nutritious diet, regular exercise, and routine veterinary care. A balanced lifestyle, including mental stimulation and a safe environment, contributes to a pet's overall well-being. Attentiveness to behavioral changes and prompt veterinary attention further ensures a happy and healthy companion.</p>
+    </div>
+
+    <div id="accuracy">
+      <p>Accuracy: 75%</p>
+      <span id="accuracyValue">  </span>
+    </div>
+
+    <div id="Suggestion">
+      <p>Suggestion:</p>
+      <span id="SuggestionValue">  </span>
+    </div>
+  </div>
+
+  <script>
+    function uploadImage() {
+        const form = document.getElementById('uploadForm');
+        const imageInput = document.getElementById('image');
+        const formData = new FormData(form);
+        const imagePreview = document.getElementById('imagePreview');
+        const uploadedImage = document.createElement('img');
+        uploadedImage.src = URL.createObjectURL(imageInput.files[0]);
+        uploadedImage.alt = 'Uploaded Image';
+        uploadedImage.style.maxWidth = '100%';
+        uploadedImage.style.maxHeight = '300px';
+        
+        // Clear previous content and append the new image
+        imagePreview.innerHTML = '';
+        imagePreview.appendChild(uploadedImage);
+    
+        // Display loading message or spinner while waiting for the API response
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = '<p>Loading...</p>';
+    
+        fetch('/api/predict/', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display the result in the 'result' div
+            resultDiv.innerHTML = `<p>${JSON.stringify(data.replay)}</p>`;
+    
+            // Display the uploaded image
+            
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Display an error message in the 'result' div
+            resultDiv.innerHTML = '<p>Error occurred while processing the image. Please try again.</p>';
+        });
+    }
+    
+  </script>
+</body>
+</html>
+
+{% endblock %}
