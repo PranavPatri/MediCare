@@ -1,4 +1,4 @@
-
+{% load static %}
 
 {% block content %}
 <!DOCTYPE html>
@@ -7,33 +7,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pet Disease Detection & Remedy Companion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 20px;
+      color: #333;
     }
 
     #container {
       max-width: 600px;
       margin: auto;
-      background-color: white; /* Set container color */
+      background-color: #ffffff;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    #dragDropArea {
-      border: 2px dashed #ccc;
-      padding: 20px;
+    h1 {
+      font-weight: 600;
+      color: #333;
       text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    #fileInput {
-      display: none;
+    button:hover {
+      background-color: #0056b3;
     }
 
     #imagePreview {
@@ -42,51 +62,59 @@
     }
 
     #imagePreview img {
-      max-width: 50%;
-      height: auto; /* Maintain aspect ratio */
+      max-width: 100%;
+      height: auto;
       border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     #result {
       margin-top: 20px;
-      font-size: 18px;
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    #accuracy {
-      margin-top: 20px;
-      font-size: 18px;
-      color: blue; /* Set Accuracy color to Blue */
-    }
-
-    #accuracyValue {
-      font-weight: bold;
-      color: green; /* Set Accuracy text color to Green */
-    }
-
-    #remedies {
-      margin-top: 20px;
-    }
-
-    #remedies p {
-      margin-bottom: 10px;
+    #result p {
+      margin: 0;
       font-size: 16px;
+      color: #333;
     }
 
-    #Suggestion {
-      margin-top: 20px;
-      font-size: 18px;
-      color: blue; /* Set Suggestion color to Blue */
-    }
-
-    #SuggestionValue {
-      font-weight: bold;
-      color: pink; /* Set Suggestion text color to Pink */
-    }
   </style>
+  <style>
+    /* Styling for the button */
+    .button {
+      display: inline-block;
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    
+    .button:hover {
+      background-color: #45a049; /* Darker Green */
+    }
+    
+    /* Styling for the button's container */
+    .button-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    </style>
 </head>
 <body>
   <div id="container">
-    <h1>Pet Disease Detection & Remedy Companion</h1>
+    <h1>Skin Disease Detection & Remedy Companion</h1>
 
     <form id="uploadForm" enctype="multipart/form-data">
         <label for="image">Select Image:</label>
@@ -96,22 +124,13 @@
 
     <div id="imagePreview">
       <p id="fileName"></p>
-      <img id="previewImage" src="https://www.companionvet.ca/wp-content/uploads/2018/03/CompanionVeterinaryClinic-607921316.jpg" alt="Uploaded Image">
+      <img id="previewImage" src="{% static 'home/pred.jpg' %}" alt="Uploaded Image" style="max-height: 300px;">
     </div>
 
     <div id="result">
-      <p>Ensuring optimal pet health involves providing a nutritious diet, regular exercise, and routine veterinary care. A balanced lifestyle, including mental stimulation and a safe environment, contributes to a pet's overall well-being. Attentiveness to behavioral changes and prompt veterinary attention further ensures a happy and healthy companion.</p>
+      <p>Our Skin Disease Prediction Model utilizes  image analysis to  predict a range of skin diseases. By analyzing visual data, it aids clinicians in identifying and treating skin conditions.</p>
     </div>
 
-    <div id="accuracy">
-      <p>Accuracy: 75%</p>
-      <span id="accuracyValue">  </span>
-    </div>
-
-    <div id="Suggestion">
-      <p>Suggestion:</p>
-      <span id="SuggestionValue">  </span>
-    </div>
   </div>
 
   <script>
@@ -141,7 +160,11 @@
         .then(response => response.json())
         .then(data => {
             // Display the result in the 'result' div
-            resultDiv.innerHTML = `<p>${JSON.stringify(data.replay)}</p>`;
+            
+            resultDiv.innerHTML = `<p>${data.replay}</p><p>Description: ${data.suggestion}</p><div class="button-container">
+              <a class="button" href="#">File an appointment to a doctor</a>
+            </div>`;
+
     
             // Display the uploaded image
             

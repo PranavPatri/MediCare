@@ -294,7 +294,7 @@ header h2 {
       <ul class="chatbox">
         <li class="chat incoming">
           <span class="material-symbols-outlined">quick_phrases</span>
-          <p>Hi there 👋<br>How can I help you today? Your 24/7 Pet Care Companion</p>
+          <p>Hi there 👋<br>How can I help you today? Your 24/7 MediBot Companion</p>
         </li>
       </ul>
       <div class="chat-input">
@@ -311,7 +311,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null;
-const API_KEY = "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";
+const API_KEY = YOUR_API_KEY;
 const RETRIEVE_DATA_URL = "retrieve_data.php";
 
 const inputInitHeight = chatInput.scrollHeight;
@@ -433,7 +433,7 @@ const handleChat = () => {
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
     setTimeout(() => {
-        const incomingChatLi = createChatLi("PawBot is typing...", "incoming");
+        const incomingChatLi = createChatLi("MediBot is typing...", "incoming");
         chatbox.appendChild(incomingChatLi);
         chatbox.scrollTo(0, chatbox.scrollHeight);
 

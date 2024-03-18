@@ -161,33 +161,33 @@
         <div class="col-md-8 col-xs-12 col-sm-12 login_form">
           <div class="container-fluid">
             <div class="row">
-              <h2 class="mt-3 ml-3">Registration</h2>
+              <h2 class="mt-3 ml-3">Doctor Registration</h2>
             </div>
             <div class="row">
               <form
                 control=""
                 class="form-group"
                 method="POST"
-                action="{% url 'registration' %}"
+                action="{% url 'dregistration' %}"
               >
                 {% csrf_token %}
                 <div class="row">
                   <input
                     type="text"
-                    name="petname"
+                    name="dpetname"
                     id="petname"
                     class="form__input"
-                    placeholder="Patient name"
+                    placeholder="Doctor name"
                   />
                 </div>
                 
                 <div class="row">
                   <input
-                    type="email"
-                    name="ownermail"
+                    type="text"
+                    name="downermail"
                     id="petmail"
                     class="form__input"
-                    placeholder="Your Mail"
+                    placeholder="Specilization"
                   />
                 </div>
                 {% comment %} <div class="row">
@@ -201,14 +201,14 @@
                 </div> {% endcomment %}
                 <div class="row">
                   <input
-                    type="number"
-                    name="petage"
+                    type="text"
+                    name="dpetage"
                     id="petage"
                     class="form__input"
-                    placeholder="Your Age"
+                    placeholder="Hospital Name"
                   />
                 </div>
-                <div class="row">
+                {% comment %} <div class="row">
                   <input
                     type="radio"
                     name="gender"
@@ -223,9 +223,9 @@
                     value="female"
                     id="female"
                     class="ml-5"
-                  />
-                  <label for="female" class="ml-2">Female</label>
-                </div>
+                  /> {% endcomment %}
+                  {% comment %} <label for="female" class="ml-2">Female</label>
+                </div> {% endcomment %}
 
                 <div class="row">
                   <input

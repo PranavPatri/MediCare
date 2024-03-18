@@ -15,14 +15,37 @@ class Pet(models.Model):
     def __str__(self):
         return str(self.petid)
     
-class Appointment(models.Model):
-    hospital = models.CharField(max_length=255)
-    pet_name = models.CharField(max_length=255)
-    owner_name = models.CharField(max_length=255)
-    health_issue = models.CharField(max_length=255)
-    pet_gender = models.CharField(max_length=6)
-    appointment_date_time = models.DateTimeField()
+class Appointment1(models.Model):
+    hospital = models.CharField(max_length=255,default="hospital")
+    patient_name = models.CharField(max_length=255)
+    patient_email = models.EmailField(default="test@gmail.com")
+    health_issue = models.CharField(max_length=1000)
+    age=models.IntegerField(default=0)
+    appointmentType=models.CharField(max_length=255)
+    appointment_date_time = models.DateField()
 
     def __str__(self):
-        return str(self.pet_name)
+        return str(self.patient_name)
 
+
+class Hospital(models.Model):
+    hid=models.CharField(max_length=50)
+    hnumber=models.CharField(max_length=20,default="-")
+    hmail=models.CharField(max_length=500,default="hospital@gmail.com")
+    hname=models.CharField(max_length=500)
+    pincode=models.CharField(max_length=6)
+    state=models.CharField(max_length=50)
+    dist=models.CharField(max_length=60)
+    Address=models.CharField(max_length=100)
+    speciality=models.CharField(max_length=100)
+   
+   
+class Doctor(models.Model):
+    first_name = models.CharField(max_length=100, primary_key=True) 
+    specialization = models.CharField(max_length=150)
+    password = models.CharField(max_length=150)
+    hospital = models.CharField(max_length=150)
+    # Add any other fields relevant to the doctor
+
+    def _str_(self):
+        return self.first_name

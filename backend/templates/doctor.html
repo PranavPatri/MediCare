@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add your CSS styling here */
+        .container {
+            margin-top: 20px;
+        }
+        .availability-section {
+            margin-top: 30px;
+        }
+        .prescription-text {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Appointments</h2>
+    <div id="accordion">
+        <!-- Dynamic Appointment Sections -->
+        <!-- Example of a single appointment, you'll need to loop through your appointments and generate similar structure -->
+        {% for appointment in appointments %}
+        <div class="card">
+            <div class="card-header" id="heading{{ appointment.id }}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ appointment.id }}" aria-expanded="true" aria-controls="collapse{{ appointment.id }}">
+                        Appointment with {{ appointment.patient_name }} on {{ appointment.date }}
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapse{{ appointment.id }}" class="collapse show" aria-labelledby="heading{{ appointment.id }}" data-parent="#accordion">
+                <div class="card-body">
+                    <!-- Appointment Details Here -->
+                    Patient Name:       {{ appointment.patient_name }}<br>
+                    AppointmentType: {{ appointment.appointmentType }}<br>
+                    Date: {{ appointment.appointment_date_time }}<br>
+                    Symptoms: {{ appointment.health_issue }}
+                    <p>
+                        <strong>Prescribe Medicines:</strong>
+                        {{ issue.email }}
+                        <a
+                          href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to={{ appointment.patient_email }}"
+                          target="_blank"
+                          rel="nofollow noopener"
+                          title="Send Email"
+                          >-reply</a
+                        >
+                      </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="availability-section">
+        <form>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="availabilityCheck">
+                <label class="form-check-label" for="availabilityCheck">I am available for appointments</label>
+                <textarea class="form-control prescription-text" id="prescriptionOne" rows="3" placeholder="Write prescription here..." style="display: none;"></textarea>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
